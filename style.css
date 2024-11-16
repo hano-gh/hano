@@ -1,0 +1,303 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: lightskyblue;
+	font-family: Arial, sans-serif;
+	color:  darkslateblue;
+	margin: 0;
+
+}
+
+
+
+.container{
+	max-width: 500px;
+	padding: 20px;
+	text-align: center;
+	background-color: #16A8E1;
+	border: 3px solid #0C4AAC;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	align-items: center;
+	flex: 2;
+    margin:0 20px;
+    box-sizing: border-box;
+    font-size: large;
+margin-top: 20px;
+
+}
+
+h1{
+	font-size: 2.5em;
+	color: darkblue;
+	margin-bottom:20px ;
+	
+    animation: bounce 2s infinite;
+}
+@keyframes bounce{
+0%, 100% {transform:translateY(0); }
+50% { transform: translateY(-20px); }
+
+}
+
+p{
+	font-size: 1.2em;
+	margin-bottom:15px ;
+
+}
+
+.signature{
+	font-style: italic;
+	color: #D4F0F2;
+	margin-top:20px ;
+	font-size: 1.1em;
+	text-decoration:underline ;
+	animation: zoomIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+h2{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: darkblue;
+}
+.bd-message{
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	color: #D4F0F2;
+	background-color: darkblue;
+	padding: 5px;
+	border-radius: 5px;
+	transition: box-shadow 0.3s ease;
+}
+
+.bd-message:hover{
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+ .emoji{
+	position: absolute;
+	top: 60px;
+	left: 100px;
+	padding: 5px;
+	transition: transform 0.3s ease;
+}
+.emoji:hover{
+	transform: rotate(360deg);
+}
+
+
+ .sticker{
+width: 80px;
+height: auto;
+position: fixed;
+top: 1%;
+z-index: 1000;
+border-radius: 10px;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+text-align: center;
+transition: transform 0.3s ease;
+}
+
+.sticker.top{
+	left: 10px;
+	top: 100%;
+	
+}
+
+
+.sticker.botom{
+	right: 10px;
+	bottom: 20px;
+	text-align: center;
+	
+}
+
+.sticker:hover{
+transform: scale(1.1);
+}
+
+
+.text{
+	display: flex;
+	align-items: center;
+	max-width: 800px;
+	
+	padding: 20px;
+}
+
+
+.text1{
+
+	padding: 10px;
+    width: 30px;
+	border: 2px dotted darkslateblue;
+    font-style: italic;
+    margin-right: 8px;
+   padding-left: 5px;
+  display: inline-block;
+overflow: hidden;
+position: relative;
+justify-content: center;
+height: 350px;
+   animation: typing 4s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+.right-text{
+	padding: 10px;
+	background-color: darkslateblue;
+	color: lightskyblue;
+	border-radius: 5px;
+	box-shadow:0px 2px 5px rgba(0, 0, 0, 0.2);
+	margin-right: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 2px dashed silver;
+    
+    position: relative;
+}
+footer {
+	background-color: silver;
+	color: darkslateblue;
+	text-align: center;
+	padding: 10px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	font-size: larger;
+	border: 2px solid darkblue;
+	
+}
+.hover-text{
+	color:darkblue ;
+	transition: color 0.3s ease;
+}
+footer:hover{
+	color: hotpink;
+}
+.right-footer{
+	
+	top: 50%;
+	color: darkblue;
+	padding: 10px 20px;
+	transform: translateY(-50%);
+	text-align: center;
+	text-decoration: underline;
+
+	height: 180px;
+	left: 2px;
+	
+}
+
+
+
+
+
+.right-title{
+     position: absolute;
+	top: 160px;
+	right: 3%;
+	color: hotpink;
+	text-decoration: underline;
+	font-weight: bold;
+    transition: backgroundcolor 0.3s ease, color 0.3s ease;
+}
+
+.hover-card:hover{
+	background-color: darkslateblue;
+	color: hotpink;
+}
+button {
+	visibility: hidden;
+	min-width: 250px;
+	background-color: lightskyblue;
+	color: darkblue;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 1;
+	font-size: 18px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+.toast.show{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+#particles {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: -1;
+}
+
+.particle {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: rgba(255, 105, 180, 0.5);
+	opacity: 0.6;
+	animation: float 5s ease infinite;
+    border-radius: 50%;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0) scale(1);
+		opacity: 0.7;
+	}
+	50% {
+		transform: translateY(-100px) scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-200px) scale(1);
+		opacity: 0;
+	}
+
+}
+
